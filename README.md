@@ -1,9 +1,9 @@
 <p align="center">
-  <a href="https://www.youtube.com/c/TeachingForDevelopment" target="blank"><img src="https://i.imgur.com/SZqGIpL.png" width="80" alt="TFD Logo" /></a>
+  <a href="https://www.youtube.com/c/TeachingForDevelopment" target="_blank" rel="noopener noreferrer"><img src="https://i.imgur.com/SZqGIpL.png" width="80" alt="TFD Logo" /></a>
 </p>
 
 
-<p align="center">A <a href="https://nestjs.com/" target="_blank">Nest.js</a> boilerplate by <a href="https://www.youtube.com/c/TeachingForDevelopment" target="_blank">TFD</a> for building scalable api.</p>
+<p align="center">A <a href="https://nestjs.com/" target="_blank" rel="noopener noreferrer">Nest.js</a> boilerplate by <a href="https://www.youtube.com/c/TeachingForDevelopment" target="_blank" rel="noopener noreferrer">TFD</a> for building scalable api.</p>
 <p align="center">
 <img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white" width="75">
 <img src="https://img.shields.io/badge/node.js-%2343853D.svg?style=for-the-badge&logo=node.js&logoColor=white" width="80">

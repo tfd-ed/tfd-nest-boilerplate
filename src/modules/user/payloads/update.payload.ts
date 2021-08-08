@@ -1,6 +1,5 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { IsOptional, MinLength } from 'class-validator';
-import { SameAs } from '../../common/validator/same-as.validator';
+import { IsOptional } from 'class-validator';
 
 export class UpdatePayload {
   @ApiProperty({
@@ -20,15 +19,4 @@ export class UpdatePayload {
   })
   @IsOptional()
   email: string;
-
-  @ApiProperty({
-    required: false,
-  })
-  @MinLength(5)
-  @IsOptional()
-  password: string;
-
-  @ApiProperty({ required: false })
-  @SameAs('password')
-  passwordConfirmation: string;
 }
