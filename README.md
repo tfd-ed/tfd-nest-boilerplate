@@ -3,7 +3,7 @@
 </p>
 
 
-<p align="center">A <a href="https://nestjs.com/" target="_blank" rel="noopener noreferrer">Nest.js</a> boilerplate by <a href="https://www.youtube.com/c/TeachingForDevelopment" target="_blank" rel="noopener noreferrer">TFD</a> for building scalable api.</p>
+<p align="center">A <a href="https://nestjs.com/" target="_blank" rel="noopener noreferrer">Nest.js</a> boilerplate by <a href="https://www.youtube.com/c/TeachingForDevelopment" target="_blank" rel="noopener noreferrer">TFD</a> for building scalable API.</p>
 <p align="center">
 <img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white" width="75">
 <img src="https://img.shields.io/badge/node.js-%2343853D.svg?style=for-the-badge&logo=node.js&logoColor=white" width="80">
