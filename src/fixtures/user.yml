@@ -1,0 +1,17 @@
+entity: UserEntity
+items:
+  user1:
+    username: user
+    name: '{{name.firstName}} {{name.lastName}}'
+    password: admin
+    roles:
+      - ADMIN
+    email: '{{internet.email}}'
+  user2:
+    username: user2
+    name: '{{name.firstName}} {{name.lastName}}'
+    password: admin2
+    roles:
+      - DEFAULT
+    email: '{{internet.email}}'
+
