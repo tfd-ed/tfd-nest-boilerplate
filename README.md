@@ -45,10 +45,11 @@ This is a NestJS boilerplate code with preconfigured libraries and packages with
 - Basic request time logger
 
 ## Setup Guide
-
+**Be aware that** putting **DB_SYNC** to true in your production may result in data lose.
+**DB_SYNC**  should only be put to true in development to skip the necessity of doing migrations.
 ### Without Docker
 
-- Create .env file with command `cp .env.example .env` and replace with your own env vars
+- Create .env file with command `cp .env.example .env` and replace with your own env variable
 - `yarn install`
 - `yarn start` (Your API will be exposed through port 3000)
 
