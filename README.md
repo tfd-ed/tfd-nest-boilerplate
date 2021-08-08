@@ -45,7 +45,7 @@ This is a NestJS boilerplate code with preconfigured libraries and packages with
 - Basic request time logger
 
 ## Setup Guide
-**Be aware that** putting **DB_SYNC** to true in your production may result in data lose.
+**Be aware that** putting **DB_SYNC** to true in your production may result in irreversible data lost.
 **DB_SYNC**  should only be put to true in development to skip the necessity of doing migrations.
 ### Without Docker
 
