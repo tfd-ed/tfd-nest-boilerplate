@@ -13,7 +13,6 @@ async function bootstrap() {
   app.useGlobalPipes(new ValidationPipe({ transform: true }));
   useContainer(app.select(AppModule), { fallbackOnErrors: true });
   // Listen to port given by environment on production server (Heroku, DigitalOcean App,..), otherwise 3000
-  // By default, Fastify listens only on the localhost 127.0.0.1
   // Specify '0.0.0.0' in the listen() to accept connections on other hosts.
   await app.listen(process.env.PORT || 3000);
 }
