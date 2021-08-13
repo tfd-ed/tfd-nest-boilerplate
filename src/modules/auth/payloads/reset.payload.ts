@@ -13,14 +13,14 @@ export class ResetPayload {
     required: true,
   })
   @IsNotEmpty()
-  @MinLength(6)
+  @MinLength(5)
   currentPassword: string;
 
   @ApiProperty({
     required: true,
   })
   @IsNotEmpty()
-  @MinLength(6)
+  @MinLength(5)
   newPassword: string;
 
   @ApiProperty({
