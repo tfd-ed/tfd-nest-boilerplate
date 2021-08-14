@@ -45,7 +45,7 @@ export class UsersService {
     try {
       return await this.userRepository.save(updated);
     } catch (e) {
-      throw new NotAcceptableException('Username already exists!');
+      throw new NotAcceptableException('Username or Email already exists!');
     }
   }
 

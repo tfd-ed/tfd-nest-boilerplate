@@ -34,7 +34,7 @@ export class UserEntity {
   /**
    * Email colum
    */
-  @Column({ type: 'text' })
+  @Column({ type: 'text', unique: true })
   email: string;
 
   @Column({
