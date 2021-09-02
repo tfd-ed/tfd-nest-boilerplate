@@ -12,6 +12,8 @@ import { AuthModule } from '../modules/auth/auth.module';
 import { UserModule } from '../modules/user';
 import { LoggingInterceptor } from '../modules/common/interceptor/logging.interceptor';
 import { RolesGuard } from '../modules/common/guard/roles.guard';
+import { ScheduleModule } from '@nestjs/schedule';
+import { GeetestModule } from '../modules/geetest/geetest.module';
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -85,6 +87,8 @@ import { RolesGuard } from '../modules/common/guard/roles.guard';
     AuthModule,
     UserModule,
     CommonModule,
+    GeetestModule,
+    ScheduleModule.forRoot(),
   ],
   controllers: [AppController],
   providers: [
