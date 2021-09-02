@@ -1,9 +1,4 @@
-import {
-  CACHE_MANAGER,
-  Controller,
-  Get,
-  Inject,
-} from '@nestjs/common';
+import { CACHE_MANAGER, Controller, Get, Inject } from '@nestjs/common';
 import { ApiResponse, ApiTags } from '@nestjs/swagger';
 import { GeetestService } from './geetest.service';
 import { Public } from '../common/decorator/public.decorator';
@@ -44,6 +39,8 @@ export class GeetestController {
     const bypasscache = await this.cacheManager.get(
       this.configService.get('GEETEST_BYPASS_STATUS_KEY'),
     );
+    // console.log('Key');
+    // console.log(bypasscache);
     let result;
     if (bypasscache === 'success') {
       result = await gtLib.register(digestmod, params);

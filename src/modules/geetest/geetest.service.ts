@@ -1,7 +1,6 @@
 import { CACHE_MANAGER, Inject, Injectable } from '@nestjs/common';
 import { Cron } from '@nestjs/schedule';
 import { ConfigService } from '@nestjs/config';
-import { HttpService } from '@nestjs/axios';
 import { Cache } from 'cache-manager';
 import * as Axios from 'axios';
 @Injectable()
@@ -10,7 +9,6 @@ export class GeetestService {
     @Inject(CACHE_MANAGER)
     private readonly cacheManager: Cache,
     private readonly configService: ConfigService,
-    private readonly httpService: HttpService,
   ) {}
 
   async sendRequest(params) {
@@ -24,7 +22,8 @@ export class GeetestService {
         params: params,
       });
       const resBody = res.status === 200 ? res.data : '';
-      console.log(resBody);
+      // console.log('Hello');
+      // console.log(resBody);
       bypass_res = resBody['status'];
     } catch (e) {
       bypass_res = '';
@@ -37,18 +36,24 @@ export class GeetestService {
     let bypass_status = await this.sendRequest({
       gt: this.configService.get('GEETEST_ID'),
     });
+    // console.log('Status');
+    // console.log(bypass_status);
+    // console.log('Key');
+    // console.log(this.configService.get('GEETEST_BYPASS_STATUS_KEY'));
     if (bypass_status === 'success') {
       await this.cacheManager.set(
         this.configService.get('GEETEST_BYPASS_STATUS_KEY'),
         bypass_status,
+        { ttl: 0 },
       );
     } else {
       bypass_status = 'fail';
       await this.cacheManager.set(
         this.configService.get<string>('GEETEST_BYPASS_STATUS_KEY'),
         bypass_status,
+        { ttl: 0 },
       );
     }
-    console.log(bypass_status);
+    // console.log(bypass_status);
   }
 }
